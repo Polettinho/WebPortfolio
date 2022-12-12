@@ -1,0 +1,118 @@
+:root{
+    --mainColor: #02031a;
+    --mainColorLight: #021b2b;
+    --secondaryColor: #b10c43;
+    --secondaryColorLight: #ff0841;
+    --tertiaryColor: #ebdfcc;
+    --fontPrimaryColor: #fff;
+    --fontSecondaryColor: #000;
+} 
+
+header{
+    width: 80%;
+    height: 60px;
+    background: var(--mainColorLight);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+    color: var(--fontPrimaryColor);
+}
+
+.logo{
+    width: 120px;
+}
+
+nav .logo{
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--fontPrimaryColor);
+    display: block;
+    margin: 0 5px;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    background-color: var(--secondaryColor);
+}
+
+.hamburguer{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: var(--fontPrimaryColor);
+}
+
+.hamburguer:hover{
+    background: var(--secondaryColorLight);
+}
+
+.hamburguer div{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #fff;
+}
+
+@media only screen and (max-width: 1024px){
+    header{
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    nav {
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: 0.3s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+        color: var(--fontSecondaryColor);
+    }
+
+    #nav_check:checked ~ nav {
+        left: 0;
+    }
+
+    nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    nav ul li a {
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: var(--fontSecondaryColor);
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+}

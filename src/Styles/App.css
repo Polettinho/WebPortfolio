@@ -1,0 +1,22 @@
+:root{
+    --mainColor: #02031a;
+    --mainColorLight: #021b2b;
+    --secondaryColor: #b10c43;
+    --secondaryColorLight: #ff0841;
+    --tertiaryColor: #ebdfcc;
+    --fontPrimaryColor: #fff;
+    --fontSecondaryColor: #000;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--tertiaryColor);
+}
