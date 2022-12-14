@@ -1,4 +1,4 @@
-:root{
+:root {
     --mainColor: #02031a;
     --mainColorLight: #021b2b;
     --secondaryColor: #b10c43;
@@ -6,26 +6,30 @@
     --tertiaryColor: #ebdfcc;
     --fontPrimaryColor: #fff;
     --fontSecondaryColor: #000;
-} 
+}
 
-header{
+header {
     width: 80%;
     height: 60px;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: var(--mainColorLight);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
-    border-radius: 0 0 10px 10px;
     margin: 0 auto;
+    border-radius: 0 0 10px 10px;
     color: var(--fontPrimaryColor);
+    position: fixed;
 }
 
-.logo{
+.logo {
     width: 120px;
 }
 
-nav .logo{
+nav .logo {
     display: none;
 }
 
@@ -43,11 +47,11 @@ nav ul li a {
     transition: 0.3s;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     background-color: var(--secondaryColor);
 }
 
-.hamburguer{
+.hamburguer {
     display: none;
     height: fit-content;
     cursor: pointer;
@@ -57,26 +61,26 @@ nav ul li a:hover{
     color: var(--fontPrimaryColor);
 }
 
-.hamburguer:hover{
+.hamburguer:hover {
     background: var(--secondaryColorLight);
 }
 
-.hamburguer div{
+.hamburguer div {
     width: 30px;
     height: 2px;
     margin: 6px 0;
     background: #fff;
 }
 
-@media only screen and (max-width: 1024px){
-    header{
+@media only screen and (max-width: 1024px) {
+    header {
         width: 90%;
         padding: 0 20px;
     }
 
     nav {
         position: absolute;
-        left: -300px;
+        left: -400px;
         top: 0;
         z-index: 999;
         width: 280px;
@@ -87,16 +91,17 @@ nav ul li a:hover{
         color: var(--fontSecondaryColor);
     }
 
-    #nav_check:checked ~ nav {
-        left: 0;
+    #nav_check:checked~nav {
+        left: -50px;
     }
 
-    nav .logo{
+    nav .logo {
         display: block;
         height: 70px;
         display: flex;
         align-items: center;
         margin-left: 30px;
+        font-size: 24px;
     }
 
     nav ul li a {
